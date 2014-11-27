@@ -17,9 +17,9 @@ import org.apache.spark._
 
 object Step4ApplyEbgm {
 
-  private val nf1 = new NFunction(1.256983e-03, 6.236386e+00)
-  private val nf2 = new NFunction(1.185119e-06, 2.974545e-01)
-  private val qf = new QFunction(nf1, nf2, 1.016530e-07)
+  private val nf1 = new NFunction(6.810308e-07, 2.364503e-01)
+  private val nf2 = new NFunction(2.499492e-04, 3.896551e+00)
+  private val qf = new QFunction(nf1, nf2, 1.000000e+00)
 
   def ebgm(actual: Int, expected: Double): Double = {
     val qval = qf.eval(actual, expected)
